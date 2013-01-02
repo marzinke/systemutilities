@@ -1,0 +1,24 @@
+            == System.Utilities: The .NET Toolkit for Every Programmer ==
+
+                -- Compatibility --
+
+.NET Runtimes Supported:
+* .NET 3.0
+* .NET 3.5
+* .NET 4.0
+* .NET 4.5
+* Silverlight 4
+* Silverlight 5
+* Windows 8 Runtime
+
+CPU Architectures Suppported:
+* .NET
+  - x86
+  - x64
+  - Itanium
+* Silverlight
+  - x86
+  - x64
+* Windows Runtime
+  - x86
+  - x64

@@ -1,0 +1,13 @@
+*.vssscc
+*.vspscc
+*.suo
+*.user
+*.dll
+*.bak
+obj/
+bin/
+Build/
+packages/
+Debug/
+Release/
+_ReSharper.System.Utilities/
