@@ -22,8 +22,7 @@ using System.Xml.Serialization;
 
 namespace System
 {
-	[Serializable]
-	public struct HashID : ISerializable, IXmlSerializable
+	public struct HashID : IXmlSerializable
 	{
 		private ulong first;
 		private ulong second;
@@ -121,22 +120,6 @@ namespace System
 		}
 
 		#region - Serialization -
-
-		public HashID(SerializationInfo info, StreamingContext context)
-		{
-			first = info.GetUInt64("first");
-			second = info.GetUInt64("second");
-			third = info.GetUInt64("third");
-			fourth = info.GetUInt64("fourth");
-		}
-
-		public void GetObjectData(SerializationInfo info, StreamingContext context)
-		{
-			info.AddValue("first", first);
-			info.AddValue("second", second);
-			info.AddValue("third", third);
-			info.AddValue("fourth", fourth);
-		}
 
 		public Xml.Schema.XmlSchema GetSchema()
 		{

@@ -107,11 +107,11 @@
     <Compile Include="..\Source\Collections\ObservableCollectionEx.cs">
       <Link>Collections\ObservableCollectionEx.cs</Link>
     </Compile>
+    <Compile Include="..\Source\Silverlight\Types\HashID.cs">
+      <Link>Types\HashID.cs</Link>
+    </Compile>
     <Compile Include="..\Source\Silverlight\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
-    </Compile>
-    <Compile Include="..\Source\Types\HashID.cs">
-      <Link>Types\HashID.cs</Link>
     </Compile>
     <Compile Include="Collections\ObservableCollectionExtensions.cs" />
     <Compile Include="Cryptography\Encryption.cs" />

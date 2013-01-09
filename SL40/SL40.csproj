@@ -72,11 +72,11 @@
     <Compile Include="..\Source\Silverlight\Types\Base2.cs">
       <Link>Types\Base2.cs</Link>
     </Compile>
+    <Compile Include="..\Source\Silverlight\Types\HashID.cs">
+      <Link>Types\HashID.cs</Link>
+    </Compile>
     <Compile Include="..\Source\Silverlight\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
-    </Compile>
-    <Compile Include="..\Source\Types\HashID.cs">
-      <Link>Types\HashID.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
