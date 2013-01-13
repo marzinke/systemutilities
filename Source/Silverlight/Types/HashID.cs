@@ -116,7 +116,12 @@ namespace System
 
 		public static HashID GenerateHashID()
 		{
-			return new HashID(Hash.Compute256Byte(Guid.NewGuid().ToByteArray()));
+			var barr = new byte[64];
+			Guid.NewGuid().ToByteArray().CopyTo(barr, 0);
+			Guid.NewGuid().ToByteArray().CopyTo(barr, 16);
+			Guid.NewGuid().ToByteArray().CopyTo(barr, 32);
+			Guid.NewGuid().ToByteArray().CopyTo(barr, 48);
+			return new HashID(Hash.Compute256Byte(barr));
 		}
 
 		#region - Serialization -
