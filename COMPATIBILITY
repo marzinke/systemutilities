@@ -13,12 +13,12 @@
 
 CPU Architectures Suppported:
 * .NET
-  - x86
-  - x64
-  - Itanium
+- x86
+- x64
+- Itanium
 * Silverlight
-  - x86
-  - x64
+- x86
+- x64
 * Windows Runtime
-  - x86
-  - x64
+- x86
+- x64
