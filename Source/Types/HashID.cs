@@ -78,6 +78,18 @@ namespace System
 			return BitConverter.ToString(arr).Replace("-", "");
 		}
 
+		public Guid ToGUID()
+		{
+			ulong a = first ^ second;
+			ulong b = third ^ fourth;
+			var arr = new byte[16];
+
+			BitConverter.GetBytes(a).CopyTo(arr, 0);
+			BitConverter.GetBytes(b).CopyTo(arr, 8);
+
+			return new Guid(arr);
+		}
+
 		public override bool Equals(object obj)
 		{
 			if (obj.GetType() != typeof (HashID)) return base.Equals(obj);
