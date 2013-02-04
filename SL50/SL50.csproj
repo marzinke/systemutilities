@@ -57,7 +57,7 @@
     <Reference Include="System.Windows.Browser" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Source\Collections\ObservableCollectionEx.cs">
+    <Compile Include="..\Source\NET\Collections\ObservableCollectionEx.cs">
       <Link>Collections\ObservableCollectionEx.cs</Link>
     </Compile>
     <Compile Include="..\Source\Silverlight\Collections\ObservableCollectionExtensions.cs">
@@ -77,6 +77,9 @@
     </Compile>
     <Compile Include="..\Source\Silverlight\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\NET\Text\StringFormatter.cs">
+      <Link>Text\StringFormatter.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

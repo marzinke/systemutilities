@@ -104,8 +104,11 @@
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Source\Collections\ObservableCollectionEx.cs">
+    <Compile Include="..\Source\NET\Collections\ObservableCollectionEx.cs">
       <Link>Collections\ObservableCollectionEx.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\WinRT\Collections\ObservableCollectionExtensions.cs" >
+      <Link>Collections\ObservableCollectionExtensions.cs</Link>
     </Compile>
     <Compile Include="..\Source\Silverlight\Types\HashID.cs">
       <Link>Types\HashID.cs</Link>
@@ -113,11 +116,19 @@
     <Compile Include="..\Source\Silverlight\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
     </Compile>
-    <Compile Include="Collections\ObservableCollectionExtensions.cs" />
-    <Compile Include="Cryptography\Encryption.cs" />
-    <Compile Include="Cryptography\Hash.cs" />
+    <Compile Include="..\Source\NET\Text\StringFormatter.cs">
+      <Link>Text\StringFormatter.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\WinRT\Cryptography\Encryption.cs" >
+      <Link>Cryptography\Encryption.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\WinRT\Cryptography\Hash.cs" >
+      <Link>Cryptography\Hash.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Types\Base2.cs" />
+    <Compile Include="..\Source\WinRT\Types\Base2.cs" >
+      <Link>Types\Base2.cs</Link>
+    </Compile>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">
     <VisualStudioVersion>11.0</VisualStudioVersion>

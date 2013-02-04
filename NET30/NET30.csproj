@@ -39,17 +39,20 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Source\Collections\ObservableCollectionEx.cs">
+    <Compile Include="..\Source\NET\Collections\ObservableCollectionEx.cs">
       <Link>Collections\ObservableCollectionEx.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Types\Base2.cs">
+    <Compile Include="..\Source\NET\Types\Base2.cs">
       <Link>Types\Base2.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Types\HashID.cs">
+    <Compile Include="..\Source\NET\Types\HashID.cs">
       <Link>Types\HashID.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Validation\Validation.cs">
+    <Compile Include="..\Source\NET\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
+    </Compile>
+    <Compile Include="..\Source\NET\Text\StringFormatter.cs">
+      <Link>Text\StringFormatter.cs</Link>
     </Compile>
     <Compile Include="Cryptography\Encryption.cs" />
     <Compile Include="Cryptography\Hash.cs" />

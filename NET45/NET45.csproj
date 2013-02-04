@@ -41,28 +41,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\Source\Collections\ObservableCollectionEx.cs">
+    <Compile Include="..\Source\NET\Collections\ObservableCollectionEx.cs">
       <Link>Collections\ObservableCollectionEx.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Collections\ObservableCollectionExtensions.cs">
+    <Compile Include="..\Source\NET\Collections\ObservableCollectionExtensions.cs">
       <Link>Collections\ObservableCollectionExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Cryptography\Encryption.cs">
+    <Compile Include="..\Source\NET\Cryptography\Encryption.cs">
       <Link>Cryptography\Encryption.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Cryptography\Hash.cs">
+    <Compile Include="..\Source\NET\Cryptography\Hash.cs">
       <Link>Cryptography\Hash.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Types\Base2.cs">
+    <Compile Include="..\Source\NET\Types\Base2.cs">
       <Link>Types\Base2.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Types\HashID.cs">
+    <Compile Include="..\Source\NET\Types\HashID.cs">
       <Link>Types\HashID.cs</Link>
     </Compile>
-    <Compile Include="..\Source\Validation\Validation.cs">
+    <Compile Include="..\Source\NET\Validation\Validation.cs">
       <Link>Validation\Validation.cs</Link>
     </Compile>
+    <Compile Include="..\Source\NET\Text\StringFormatter.cs">
+      <Link>Text\StringFormatter.cs</Link>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Text\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
