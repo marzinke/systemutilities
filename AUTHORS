@@ -1,12 +1,12 @@
-            == System.Utilities: The .NET Toolkit for Every Programmer ==
+# System.Utilities: The .NET Toolkit for Every Programmer
 
-                -- Authors --
+## Authors
 
 This project is written and maintained by the following people:
 
-    * Adam Wilson (AKA "LightBender")
-      - http://ps.prospectivesoftware.com
-      - adamw@prospectivesoftware.com
-    * Jonathan Marzinke (AKA "LightBender")
-      - http://www.prospectivesoftware.com
-      - jonathanm@prospectivesoftware.com
+* Adam Wilson (AKA "LightBender")
+  - http://ps.prospectivesoftware.com
+  - adamw@prospectivesoftware.com
+* Jonathan Marzinke (AKA "marzinke")
+  - http://www.prospectivesoftware.com
+  - jonathanm@prospectivesoftware.com
