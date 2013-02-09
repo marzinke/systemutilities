@@ -25,10 +25,10 @@ namespace System
 	[Serializable]
 	public struct HashID : ISerializable, IXmlSerializable
 	{
-		private ulong first;
-		private ulong second;
-		private ulong third;
-		private ulong fourth;
+		[NonSerialized]private ulong first;
+		[NonSerialized]private ulong second;
+		[NonSerialized]private ulong third;
+		[NonSerialized]private ulong fourth;
 
 		public HashID(byte[] hash)
 		{
@@ -141,18 +141,21 @@ namespace System
 
 		public HashID(SerializationInfo info, StreamingContext context)
 		{
-			first = info.GetUInt64("first");
-			second = info.GetUInt64("second");
-			third = info.GetUInt64("third");
-			fourth = info.GetUInt64("fourth");
+			string t = info.GetString("value");
+			
+			var harr = new byte[32];
+			for (int i = 0; i < 32; i++)
+				harr[i] = byte.Parse(t.Substring(i * 2, 2), NumberStyles.HexNumber);
+
+			first = BitConverter.ToUInt64(harr, 0);
+			second = BitConverter.ToUInt64(harr, 8);
+			third = BitConverter.ToUInt64(harr, 16);
+			fourth = BitConverter.ToUInt64(harr, 24);
 		}
 
 		public void GetObjectData(SerializationInfo info, StreamingContext context)
 		{
-			info.AddValue("first", first);
-			info.AddValue("second", second);
-			info.AddValue("third", third);
-			info.AddValue("fourth", fourth);
+			info.AddValue("value", ToHexString());
 		}
 
 		public Xml.Schema.XmlSchema GetSchema()
@@ -164,23 +167,23 @@ namespace System
 		{
 			reader.MoveToContent();
 			reader.ReadStartElement();
-			reader.MoveToAttribute("first");
-			first = Convert.ToUInt64(reader.Value);
-			reader.MoveToAttribute("second");
-			second = Convert.ToUInt64(reader.Value);
-			reader.MoveToAttribute("third");
-			third = Convert.ToUInt64(reader.Value);
-			reader.MoveToAttribute("fourth");
-			fourth = Convert.ToUInt64(reader.Value);
+			reader.MoveToAttribute("value");
+			string t = Convert.ToString(reader.Value);
 			reader.ReadEndElement();
+
+			var harr = new byte[32];
+			for (int i = 0; i < 32; i++)
+				harr[i] = byte.Parse(t.Substring(i * 2, 2), NumberStyles.HexNumber);
+
+			first = BitConverter.ToUInt64(harr, 0);
+			second = BitConverter.ToUInt64(harr, 8);
+			third = BitConverter.ToUInt64(harr, 16);
+			fourth = BitConverter.ToUInt64(harr, 24);
 		}
 
 		public void WriteXml(Xml.XmlWriter writer)
 		{
-			writer.WriteAttributeString("first", first.ToString(CultureInfo.InvariantCulture));
-			writer.WriteAttributeString("second", second.ToString(CultureInfo.InvariantCulture));
-			writer.WriteAttributeString("third", third.ToString(CultureInfo.InvariantCulture));
-			writer.WriteAttributeString("fourth", fourth.ToString(CultureInfo.InvariantCulture));
+			writer.WriteAttributeString("value", ToHexString());
 		}
 	
 		#endregion
