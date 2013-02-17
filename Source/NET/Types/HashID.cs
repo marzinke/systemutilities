@@ -22,14 +22,16 @@ using System.Xml.Serialization;
 
 namespace System
 {
-	[Serializable]
-	public struct HashID : ISerializable, IXmlSerializable
+	[Serializable, DataContract]
+	public struct HashID
 	{
-		[NonSerialized] private ulong first;
-		[NonSerialized] private ulong second;
-		[NonSerialized] private ulong third;
-		[NonSerialized] private ulong fourth;
-		[NonSerialized] private int hashcode;
+		[NonSerialized, XmlIgnore, IgnoreDataMember] private ulong first;
+		[NonSerialized, XmlIgnore, IgnoreDataMember] private ulong second;
+		[NonSerialized, XmlIgnore, IgnoreDataMember] private ulong third;
+		[NonSerialized, XmlIgnore, IgnoreDataMember] private ulong fourth;
+		[NonSerialized, XmlIgnore, IgnoreDataMember] private int hashcode;
+
+		[DataMember(Order = 1)] private byte[] value { get { return ToByteArray(); } set { var t = new HashID(value); first = t.first; second = t.second; third = t.third; fourth = t.fourth; hashcode = t.hashcode; } }
 
 		public HashID(byte[] hash)
 		{
@@ -147,66 +149,5 @@ namespace System
 			Guid.NewGuid().ToByteArray().CopyTo(barr, 48);
 			return new HashID(Hash.Compute256Byte(barr));
 		}
-
-		#region - Serialization -
-
-		public HashID(SerializationInfo info, StreamingContext context)
-		{
-			string t = info.GetString("value");
-			
-			var harr = new byte[32];
-			for (int i = 0; i < 32; i++)
-				harr[i] = byte.Parse(t.Substring(i * 2, 2), NumberStyles.HexNumber);
-
-			first = BitConverter.ToUInt64(harr, 0);
-			second = BitConverter.ToUInt64(harr, 8);
-			third = BitConverter.ToUInt64(harr, 16);
-			fourth = BitConverter.ToUInt64(harr, 24);
-			
-			ulong hct = first ^ second ^ third ^ fourth;
-			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
-			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
-			hashcode = hch ^ hcl;
-		}
-
-		public void GetObjectData(SerializationInfo info, StreamingContext context)
-		{
-			info.AddValue("value", ToHexString());
-		}
-
-		public Xml.Schema.XmlSchema GetSchema()
-		{
-			return null;
-		}
-
-		public void ReadXml(Xml.XmlReader reader)
-		{
-			reader.MoveToContent();
-			reader.ReadStartElement();
-			reader.MoveToAttribute("value");
-			string t = Convert.ToString(reader.Value);
-			reader.ReadEndElement();
-
-			var harr = new byte[32];
-			for (int i = 0; i < 32; i++)
-				harr[i] = byte.Parse(t.Substring(i * 2, 2), NumberStyles.HexNumber);
-
-			first = BitConverter.ToUInt64(harr, 0);
-			second = BitConverter.ToUInt64(harr, 8);
-			third = BitConverter.ToUInt64(harr, 16);
-			fourth = BitConverter.ToUInt64(harr, 24);
-
-			ulong hct = first ^ second ^ third ^ fourth;
-			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
-			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
-			hashcode = hch ^ hcl;
-		}
-
-		public void WriteXml(Xml.XmlWriter writer)
-		{
-			writer.WriteAttributeString("value", ToHexString());
-		}
-	
-		#endregion
 	}
 }
