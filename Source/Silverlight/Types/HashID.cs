@@ -28,6 +28,7 @@ namespace System
 		private ulong second;
 		private ulong third;
 		private ulong fourth;
+		private int hashcode;
 
 		public HashID(byte[] hash)
 		{
@@ -37,6 +38,11 @@ namespace System
 			second = BitConverter.ToUInt64(hash, 8);
 			third = BitConverter.ToUInt64(hash, 16);
 			fourth = BitConverter.ToUInt64(hash, 24);
+
+			ulong hct = first ^ second ^ third ^ fourth;
+			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
+			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
+			hashcode = hch ^ hcl;
 		}
 
 		public HashID(string hash)
@@ -51,6 +57,11 @@ namespace System
 			second = BitConverter.ToUInt64(harr, 8);
 			third = BitConverter.ToUInt64(harr, 16);
 			fourth = BitConverter.ToUInt64(harr, 24);
+
+			ulong hct = first ^ second ^ third ^ fourth;
+			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
+			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
+			hashcode = hch ^ hcl;
 		}
 		
 		public byte[] ToByteArray()
@@ -98,7 +109,7 @@ namespace System
 
 		public override int GetHashCode()
 		{
-			return Convert.ToInt32(first ^ second ^ third ^ fourth);
+			return hashcode;
 		}
 
 		public override string ToString()
@@ -159,6 +170,11 @@ namespace System
 			second = BitConverter.ToUInt64(harr, 8);
 			third = BitConverter.ToUInt64(harr, 16);
 			fourth = BitConverter.ToUInt64(harr, 24);
+
+			ulong hct = first ^ second ^ third ^ fourth;
+			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
+			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
+			hashcode = hch ^ hcl;
 		}
 
 		public void WriteXml(Xml.XmlWriter writer)
