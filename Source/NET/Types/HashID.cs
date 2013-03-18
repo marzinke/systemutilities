@@ -37,15 +37,18 @@ namespace System
 		{
 			if(hash.Length != 32) throw new ArgumentException("Hash value length is incorrect. Length must be 32 bytes.", "hash");
 
+			hashcode = 0;
+			for (int i = 0; i < 32; i++)
+			{
+				hashcode <<= 1;
+				if (hashcode < 0) hashcode |= 1;
+				hashcode ^= hash[i];
+			}
+
 			first = BitConverter.ToUInt64(hash, 0);
 			second = BitConverter.ToUInt64(hash, 8);
 			third = BitConverter.ToUInt64(hash, 16);
 			fourth = BitConverter.ToUInt64(hash, 24);
-
-			ulong hct = first ^ second ^ third ^ fourth;
-			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
-			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
-			hashcode = hch ^ hcl;
 		}
 
 		public HashID(string hash)
@@ -56,15 +59,18 @@ namespace System
 			for (int i = 0; i < 32; i++)
 				harr[i] = byte.Parse(hash.Substring(i*2, 2), NumberStyles.HexNumber);
 
+			hashcode = 0;
+			for (int i = 0; i < 32; i++)
+			{
+				hashcode <<= 1;
+				if (hashcode < 0) hashcode |= 1;
+				hashcode ^= harr[i];
+			}
+
 			first = BitConverter.ToUInt64(harr, 0);
 			second = BitConverter.ToUInt64(harr, 8);
 			third = BitConverter.ToUInt64(harr, 16);
 			fourth = BitConverter.ToUInt64(harr, 24);
-
-			ulong hct = first ^ second ^ third ^ fourth;
-			int hcl = BitConverter.ToInt32(BitConverter.GetBytes(hct), 0); //Hash Code ulong Low
-			int hch = BitConverter.ToInt32(BitConverter.GetBytes(hct), 4); //Hash Code ulong High
-			hashcode = hch ^ hcl;
 		}
 		
 		public byte[] ToByteArray()
