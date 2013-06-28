@@ -30,6 +30,7 @@ namespace System
 		[IgnoreDataMember]private ulong third;
 		[IgnoreDataMember]private ulong fourth;
 		[IgnoreDataMember]private int hashcode;
+		[IgnoreDataMember]private ulong longhashcode;
 
 		[DataMember(Order = 1)] private byte[] value { get { return ToByteArray(); } set { var t = new HashID(value); first = t.first; second = t.second; third = t.third; fourth = t.fourth; hashcode = t.hashcode; } }
 
@@ -42,8 +43,8 @@ namespace System
 			third = BitConverter.ToUInt64(hash, 16);
 			fourth = BitConverter.ToUInt64(hash, 24);
 
-			ulong hct = first ^ second ^ third ^ fourth;
-			byte[] hca = BitConverter.GetBytes(hct);
+			longhashcode = first ^ second ^ third ^ fourth;
+			byte[] hca = BitConverter.GetBytes(longhashcode);
 			int hcl = BitConverter.ToInt32(hca, 0); //Hash Code ulong Low
 			int hch = BitConverter.ToInt32(hca, 4); //Hash Code ulong High
 			hashcode = hcl ^ hch;
@@ -62,8 +63,8 @@ namespace System
 			third = BitConverter.ToUInt64(harr, 16);
 			fourth = BitConverter.ToUInt64(harr, 24);
 
-			ulong hct = first ^ second ^ third ^ fourth;
-			byte[] hca = BitConverter.GetBytes(hct);
+			longhashcode = first ^ second ^ third ^ fourth;
+			byte[] hca = BitConverter.GetBytes(longhashcode);
 			int hcl = BitConverter.ToInt32(hca, 0); //Hash Code ulong Low
 			int hch = BitConverter.ToInt32(hca, 4); //Hash Code ulong High
 			hashcode = hcl ^ hch;
@@ -115,6 +116,11 @@ namespace System
 		public override int GetHashCode()
 		{
 			return hashcode;
+		}
+
+		public ulong GetLongHashCode()
+		{
+			return longhashcode;
 		}
 
 		public override string ToString()
