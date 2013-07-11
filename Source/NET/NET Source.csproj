@@ -7,8 +7,8 @@
     <ProjectGuid>{79CFADDC-A5F3-4D3B-B014-778A1600B269}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NET_Source</RootNamespace>
-    <AssemblyName>NET Source</AssemblyName>
+    <RootNamespace>System</RootNamespace>
+    <AssemblyName>System.Utilities</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -43,6 +43,8 @@
     <Compile Include="Collections\ConcurrentPriorityQueue.cs" />
     <Compile Include="Collections\ObservableCollectionEx.cs" />
     <Compile Include="Collections\ObservableCollectionExtensions.cs" />
+    <Compile Include="Console\ConsoleEx.cs" />
+    <Compile Include="Console\ConsoleExModule.cs" />
     <Compile Include="Cryptography\Encryption.cs" />
     <Compile Include="Cryptography\Hash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
