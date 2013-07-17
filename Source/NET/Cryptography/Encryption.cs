@@ -909,7 +909,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -945,7 +945,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -981,7 +981,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -1017,7 +1017,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1054,7 +1054,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1090,7 +1090,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1127,7 +1127,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1168,7 +1168,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1209,7 +1209,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1249,7 +1249,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -1286,7 +1286,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -1323,7 +1323,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -1361,7 +1361,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -1396,7 +1396,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -1430,7 +1430,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -1464,7 +1464,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -1498,7 +1498,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -1532,7 +1532,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -1567,7 +1567,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS, System.Text.Encoding.UTF8);
 
@@ -1606,7 +1606,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 192, KeySize = 192, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 192, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -1648,7 +1648,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -1684,7 +1684,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -1720,7 +1720,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(System.Text.Encoding.Default.GetBytes(Data), 0, System.Text.Encoding.Default.GetByteCount(Data));
@@ -1756,7 +1756,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1792,7 +1792,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1828,7 +1828,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				CS.Write(Data, 0, Data.Length);
@@ -1865,7 +1865,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1906,7 +1906,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1947,7 +1947,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				DR = new BinaryReader(Data);
@@ -1987,7 +1987,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -2024,7 +2024,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -2061,7 +2061,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateEncryptor(), CryptoStreamMode.Write);
 
 				byte[] D = System.Text.Encoding.UTF8.GetBytes(ConvertToUnsecureString(Data));
@@ -2099,7 +2099,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -2134,7 +2134,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -2169,7 +2169,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS, System.Text.Encoding.UTF8);
 
@@ -2208,7 +2208,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 				DS = new StreamReader(CS);
 
@@ -2246,7 +2246,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -2280,7 +2280,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -2314,7 +2314,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(MS, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
@@ -2348,7 +2348,7 @@ namespace System.Utilities.Cryptography
 				//Get the IV and length corrected Key.
 				KeyData KeyData = GenerateKeyIV128(Key);
 				//Create the AES crytpograhy object.
-				AES = new AesCryptoServiceProvider { BlockSize = 256, KeySize = 256, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
+				AES = new AesCryptoServiceProvider { KeySize = 256, BlockSize = 128, FeedbackSize = 128, Key = KeyData.Key, IV = KeyData.IV, Mode = CipherMode.CBC, Padding = PaddingMode.PKCS7 };
 				CS = new CryptoStream(Data, AES.CreateDecryptor(), CryptoStreamMode.Read);
 
 				var D = new byte[CS.Length];
