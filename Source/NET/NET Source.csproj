@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Collections\BitArray.cs" />
     <Compile Include="Collections\ConcurrentPriorityQueue.cs" />
     <Compile Include="Collections\ObservableCollectionEx.cs" />
     <Compile Include="Collections\ObservableCollectionExtensions.cs" />
