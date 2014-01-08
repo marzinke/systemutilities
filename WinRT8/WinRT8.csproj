@@ -125,9 +125,6 @@
     <Compile Include="..\Source\NET\Text\StringFormatter.cs">
       <Link>Text\StringFormatter.cs</Link>
     </Compile>
-    <Compile Include="..\Source\WinRT\Cryptography\Encryption.cs">
-      <Link>Cryptography\Encryption.cs</Link>
-    </Compile>
     <Compile Include="..\Source\WinRT\Cryptography\Hash.cs">
       <Link>Cryptography\Hash.cs</Link>
     </Compile>

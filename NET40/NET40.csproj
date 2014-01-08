@@ -54,9 +54,6 @@
     <Compile Include="..\Source\NET\Collections\ObservableCollectionExtensions.cs">
       <Link>Collections\ObservableCollectionExtensions.cs</Link>
     </Compile>
-    <Compile Include="..\Source\NET\Cryptography\Encryption.cs">
-      <Link>Cryptography\Encryption.cs</Link>
-    </Compile>
     <Compile Include="..\Source\NET\Cryptography\Hash.cs">
       <Link>Cryptography\Hash.cs</Link>
     </Compile>

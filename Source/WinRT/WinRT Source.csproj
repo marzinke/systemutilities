@@ -106,7 +106,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Collections\ObservableCollectionExtensions.cs" />
-    <Compile Include="Cryptography\Encryption.cs" />
     <Compile Include="Cryptography\Hash.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\Base2.cs" />
